@@ -10,7 +10,7 @@ public class PingHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        String body = "Hello";
+        String body = "Ok";
         exchange.sendResponseHeaders(200, body.length());
         try (OutputStream os = exchange.getResponseBody()){
             os.write(body.getBytes());
